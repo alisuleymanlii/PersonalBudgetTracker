@@ -111,7 +111,19 @@ Console.WriteLine("---------------------------");
 //---------------------------------------------------------------------------------
 
 
-//-----------------------Gelir/Xerc datalar listi--------------------------------
+
+//--------------------------Kategoriya data--------------------------------------
+string qidadb = "qidadb.txt";
+string neqliyyatdb = "neqdb.txt";
+string tehsildb = "tehsildb.txt";
+
+List<string> qidalist = new List<string>();
+List<string> neqlist = new List<string>();
+List<string> tehlist = new List<string>();
+//---------------------------------------------------------------------------
+
+//------------------------------Gelir-Xerc datalar---------------------------
+
 List<string> gelirlist = new List<string>();
 List<string> xerclist = new List<string>();
 
@@ -134,24 +146,6 @@ if (File.Exists(gelirdata) && File.Exists(xercdata))
         File.WriteAllLines(xercdata, xerclist);
     }
 }
-//---------------------------------------------------------------------------------
-
-
-//--------------------------Gelir/Xerc sisttemi--------------------------------------
-string qidadb = "qidadb.txt";
-string neqliyyatdb = "neqdb.txt";
-string tehsildb = "tehsildb.txt";
-
-List<string> qidalist = new List<string>();
-List<string> neqlist = new List<string>();
-List<string> tehlist = new List<string>();
-
-
-
-
-
-
-
 
 
 
@@ -182,7 +176,7 @@ if (girisugurlu)
     do
     {
         Console.WriteLine("----**Menyu**----");
-        Console.WriteLine("\n1-Kategoriler İdare Et \n2-Gelir Elave Et \n3-Xerc Elave Et \n4-Ayliq Hesabla ");
+        Console.WriteLine("\n1-Gelir Elave Et \n2-Xerc Elave Et \n3-Ayliq Hesabla \n4-Yekun Netice \n5-Bağla");
         Console.Write("ID seçin: ");
         int id = Convert.ToInt32(Console.ReadLine());
 
